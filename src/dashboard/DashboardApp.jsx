@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import Dashboard from "./Dashboard";
+import ManagePosts from "./Manageposts";
 
 const navItems = [
   { label: "Dashboard", key: "dashboard", icon: <LayoutDashboard size={18} /> },
@@ -25,7 +26,7 @@ function renderPage(activeNav) {
   switch (activeNav) {
     case "dashboard":
       return <Dashboard />;
-    // case "posts":     return <ManagePosts />;
+    case "posts": return <ManagePosts />;
     // case "users":     return <UsersPage />;
     // case "reports":   return <Reports />;
     // case "settings":  return <SettingsPage />;
@@ -137,8 +138,6 @@ export default function DashboardApp() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeNav, setActiveNav] = useState("dashboard");
-  const today = new Date();
-  const currentDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
 
   return (
     <div className="flex h-screen bg-slate-50 font-sans overflow-hidden">
