@@ -1,9 +1,10 @@
+import DashboardApp from "./dashboard/DashboardApp";
 
 function App() {
 
   return (
     <div>
-      app
+      <DashboardApp />
     </div>
   )
 }
