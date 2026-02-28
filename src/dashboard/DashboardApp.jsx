@@ -13,12 +13,14 @@ import {
 
 import Dashboard from "./Dashboard";
 import ManagePosts from "./Manageposts";
+import UsersManagement from "./UsersManagement";
+import ProductsPage from "./ProductsPage";
 
 const navItems = [
   { label: "Dashboard", key: "dashboard", icon: <LayoutDashboard size={18} /> },
   { label: "Manage Posts", key: "posts", icon: <ClipboardList size={18} /> },
   { label: "Users", key: "users", icon: <Users size={18} /> },
-  { label: "Reports", key: "reports", icon: <BarChart2 size={18} /> },
+  { label: "Products Page", key: "products", icon: <BarChart2 size={18} /> },
   { label: "Settings", key: "settings", icon: <Settings size={18} /> },
 ];
 
@@ -27,8 +29,8 @@ function renderPage(activeNav) {
     case "dashboard":
       return <Dashboard />;
     case "posts": return <ManagePosts />;
-    // case "users":     return <UsersPage />;
-    // case "reports":   return <Reports />;
+    case "users":     return <UsersManagement />;
+    case "products":   return <ProductsPage />;
     // case "settings":  return <SettingsPage />;
     default:
       return <p>Not found</p>;
